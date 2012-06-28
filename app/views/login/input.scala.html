@@ -1,5 +1,6 @@
-@(form: Form[Option[User]])
+@(loginForm: Form[Option[User]])
 
+@import helper._
 @import views.helper.bootstrap.BasicField._
 
 @main("Login") {
@@ -7,13 +8,13 @@
   <h1>Login</h1>
   <hr/>
 
-  @helper.form(routes.Application.loginSubmit) {
-    @form.globalError.map { error =>
+  @form(action = routes.Application.loginSubmit, 'class -> "form-horizontal") {
+    @loginForm.globalError.map { error =>
       <div class="alert alert-error">@error.message</div>
     }
-    @helper.inputText(form("email"))
-    @helper.inputPassword(form("password"))
-    <button type="submit" class="btn">Login</button>
+    @inputText(loginForm("email"))
+    @inputPassword(loginForm("password"))
+    @bootstrap.submitButton()
   }
 
 }

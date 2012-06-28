@@ -6,7 +6,7 @@
   <h1>Login without Helper</h1>
   <hr/>
 
-  @helper.form(routes.Application.loginSubmitWithoutHelper) {
+  @helper.form(action = routes.Application.loginSubmitWithoutHelper, 'class -> "form-horizontal") {
 
     @form.globalError.map { error =>
       <div class="alert alert-error">@error.message</div>
@@ -32,8 +32,10 @@
       </div>
     </div>
 
-    <button type="submit" class="btn">Login</button>
+    <div class="form-actions">
+        <button type="submit" class="btn">Login</button>
+    </div>
 
-  }
+}
 
 }

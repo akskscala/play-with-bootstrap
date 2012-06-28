@@ -30,7 +30,7 @@ http://localhost:8080/login/withouthelper
 
 このアプリでの Field Constructor のサンプルは以下です。
 
-https://github.com/akskscala/play-with-bootstrap/tree/master/app/views/bootstrap
+https://github.com/akskscala/play-with-bootstrap/tree/master/app/views/helper/bootstrap
 
 ## 参考資料
 

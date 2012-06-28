@@ -1,6 +1,8 @@
 play-with-bootstrap
 ===================
 
+![ss](https://raw.github.com/akskscala/play-with-bootstrap/master/screenshot.png)
+
 ## Akasaka.scala
 
 http://akskscala.github.com/

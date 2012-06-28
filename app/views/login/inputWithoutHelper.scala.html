@@ -1,0 +1,39 @@
+@(form: Form[Option[User]])
+@import play.api.i18n._
+
+@main("Login without Helper") {
+
+  <h1>Login without Helper</h1>
+  <hr/>
+
+  @helper.form(routes.Application.loginSubmitWithoutHelper) {
+
+    @form.globalError.map { error =>
+      <div class="alert alert-error">@error.message</div>
+    }
+
+    <div id="email_field" class="control-group @form.error("email").map { _ => error }">
+      <label class="control-label" for="email">email</label>
+      <div class="controls @form.error("email").map{ e => error } aaa">
+        <input type="text" id="email" name="email" value="" >
+        @form.error("email").map { error =>
+          <span class="help-inline">@Messages(error.message, error.args: _*)</span>
+        }
+      </div>
+    </div>
+
+    <div id="password_field" class="control-group @form.error("password").map { _ => error }">
+      <label class="control-label" for="password">password</label>
+      <div class="controls">
+        <input type="password" id="password" name="password" value="" >
+        @form.error("password").map { error =>
+          <span class="help-inline">@Messages(error.message, error.args: _*)</span>
+        }
+      </div>
+    </div>
+
+    <button type="submit" class="btn">Login</button>
+
+  }
+
+}

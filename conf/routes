@@ -1,0 +1,12 @@
+# Routes
+
+GET  /                             controllers.Application.index
+
+GET  /login/                       controllers.Application.loginInput
+POST /login/submit                 controllers.Application.loginSubmit
+
+GET  /login/withouthelper          controllers.Application.loginInputWithoutHelper
+POST /login/submit/withouthelper   controllers.Application.loginSubmitWithoutHelper
+
+GET  /assets/*file  controllers.Assets.at(path="/public", file)
+

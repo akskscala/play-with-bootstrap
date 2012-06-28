@@ -13,7 +13,7 @@ import views._
 object Application extends Controller {
   
   def index = Action {
-    Ok(html.index("Your new application is ready."))
+    Ok(html.index("You need to login."))
   }
 
   val loginForm = Form(

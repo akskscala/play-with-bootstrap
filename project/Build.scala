@@ -9,7 +9,8 @@ object ApplicationBuild extends Build {
 
   val appDependencies = Seq(
     "com.github.seratch" %% "scalikejdbc"             % "1.3.2",
-    "com.github.seratch" %% "scalikejdbc-play-plugin" % "1.3.2"
+    "com.github.seratch" %% "scalikejdbc-play-plugin" % "1.3.2",
+    "com.h2database"     % "h2"                       % "[1.3,)"
   )
 
  val main = PlayProject(appName, appVersion, appDependencies, mainLang = SCALA).settings(
